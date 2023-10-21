@@ -1,0 +1,329 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"; mermaid.initialize({ startOnLoad: true });</script>
+    <style>
+        @page {
+            margin: 2cm;
+            size: letter;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 24px;
+            border-bottom: 2px solid #666;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.0;
+            overflow-x: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 10px;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 10px;
+        }
+
+        /* Use this class for analysis sections */
+        .analysis-section {
+            padding-top: 16px;
+            margin-top: 24px;
+            font-size: 12px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .new-page-section {
+            page-break-before: always;
+        }
+
+        .analysis-section h1, .analysis-section h2 {
+            color: #444;
+        }
+
+        .analysis-section p {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Polyverse Boost Source Analysis Details: ./prime-number.cbl</h1>
+    <p>Date Generated: Saturday, October 21, 2023 at 12:25:50 PM PDT</p>
+    <div class="><hr>
+<h3 id="boost-architectural-quick-summary-security-report">Boost Architectural Quick Summary Security Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:25:12 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p><div class="new-page-section><hr>
+<h3 id="boost-architectural-quick-summary-performance-report">Boost Architectural Quick Summary Performance Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:25:41 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p><div class="new-page-section><hr>
+<h3 id="boost-architectural-quick-summary-compliance-report">Boost Architectural Quick Summary Compliance Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:25:53 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p>
+    <h1>Detailed Analysis</h1><div>
+                    <h2>./prime-number.cbl line 0:</h2>
+                    <p>Programming Language: plaintext</p>
+                    <pre><code>        IDENTIFICATION DIVISION.
+        PROGRAM-ID. PRIME-NUMBER.
+        DATA DIVISION.
+        WORKING-STORAGE SECTION.
+          <span class="hljs-number">01</span> CMDARGS     PIC X(<span class="hljs-number">38</span>).
+          <span class="hljs-number">01</span> DECINUM     PIC S9999v99.
+          <span class="hljs-number">01</span> NUM         PIC S9(<span class="hljs-number">7</span>).
+          <span class="hljs-number">01</span> SQRT        PIC <span class="hljs-number">9</span>(<span class="hljs-number">7</span>).
+          <span class="hljs-number">01</span> CNT         PIC <span class="hljs-number">9</span>(<span class="hljs-number">7</span>) VALUE <span class="hljs-number">3</span>.
+          <span class="hljs-number">01</span> PRIME       PIC <span class="hljs-number">9</span>(<span class="hljs-number">1</span>) VALUE <span class="hljs-number">0</span>.
+        PROCEDURE DIVISION.
+           ACCEPT CMDARGS <span class="hljs-keyword">FROM</span> COMMAND-LINE.
+
+           <span class="hljs-keyword">IF</span> CMDARGS <span class="hljs-built_in">IS</span> ALPHABETIC <span class="hljs-keyword">THEN</span>
+              PERFORM <span class="hljs-keyword">ERROR</span>-PARA.
+           
+      * Convert CMDARGS <span class="hljs-keyword">to</span> it<span class="hljs-comment">&#x27;s cumeric value</span>
+           COMPUTE DECINUM = <span class="hljs-keyword">FUNCTION</span> NUMVAL(CMDARGS).
+           
+           <span class="hljs-keyword">IF</span> DECINUM &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">THEN</span>
+              PERFORM <span class="hljs-keyword">ERROR</span>-PARA.
+
+      * Move the <span class="hljs-type">Decimal</span> number <span class="hljs-keyword">to</span> Non <span class="hljs-type">decimal</span> number
+           MOVE DECINUM <span class="hljs-keyword">TO</span> NUM
+      
+      * <span class="hljs-keyword">If</span> both are equal, <span class="hljs-keyword">then</span> it was an <span class="hljs-type">integer</span>
+           <span class="hljs-keyword">IF</span> NUM <span class="hljs-built_in">IS</span> EQUAL <span class="hljs-keyword">TO</span> DECINUM <span class="hljs-keyword">THEN</span>
+              <span class="hljs-keyword">IF</span> <span class="hljs-keyword">FUNCTION</span> <span class="hljs-built_in">MOD</span> (NUM, <span class="hljs-number">2</span>) = <span class="hljs-number">0</span> <span class="hljs-built_in">AND</span> NUM <span class="hljs-built_in">IS</span> <span class="hljs-built_in">NOT</span> EQUAL <span class="hljs-keyword">TO</span> <span class="hljs-number">2</span>
+                 PERFORM DISPLAY-COMPOSITE
+              <span class="hljs-keyword">ELSE</span> <span class="hljs-keyword">IF</span> NUM <span class="hljs-built_in">IS</span> EQUAL <span class="hljs-keyword">TO</span> <span class="hljs-number">1</span>
+                 PERFORM DISPLAY-COMPOSITE
+              <span class="hljs-keyword">ELSE</span>
+                 COMPUTE SQRT = NUM ** <span class="hljs-number">0.5</span>
+                 PERFORM ISPRIME <span class="hljs-keyword">UNTIL</span> CNT &gt; SQRT
+                 DISPLAY <span class="hljs-string">&quot;Prime&quot;</span>
+                 <span class="hljs-keyword">STOP</span> RUN
+           <span class="hljs-keyword">ELSE</span> 
+              PERFORM <span class="hljs-keyword">ERROR</span>-PARA.
+           
+           
+          ISPRIME.
+            <span class="hljs-keyword">IF</span> <span class="hljs-keyword">FUNCTION</span> <span class="hljs-built_in">MOD</span> (NUM, CNT) = <span class="hljs-number">0</span> <span class="hljs-keyword">THEN</span>
+               PERFORM DISPLAY-COMPOSITE
+            <span class="hljs-keyword">ELSE</span>
+               COMPUTE CNT = CNT + <span class="hljs-number">1</span>
+            <span class="hljs-keyword">END</span>-<span class="hljs-keyword">IF</span>.
+           
+          DISPLAY-COMPOSITE.
+            DISPLAY <span class="hljs-string">&quot;Composite&quot;</span>
+            <span class="hljs-keyword">STOP</span> RUN.
+
+          <span class="hljs-keyword">ERROR</span>-PARA.
+           DISPLAY <span class="hljs-string">&quot;Usage: please input a non-negative integer&quot;</span>.
+           <span class="hljs-keyword">STOP</span> RUN.
+</code></pre>
+                </div><div class='analysis-section'><div class='output-item'><hr>
+<h3 id="boost-code-explanation">Boost Code Explanation</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:24:39 PM PDT</p>
+<p>This is a program written in COBOL (COmmon Business-Oriented Language), a high-level programming language for business applications. This particular program is designed to check if a number given as a command line argument is a prime number.</p>
+<p>Here&#39;s a step-by-step breakdown of the program:</p>
+<ol>
+<li><p>The program begins with the <code>IDENTIFICATION DIVISION</code> and <code>PROGRAM-ID</code>, which are standard COBOL program headers.</p>
+</li>
+<li><p>The <code>DATA DIVISION</code> and <code>WORKING-STORAGE SECTION</code> define the variables that will be used in the program.</p>
+</li>
+<li><p>The <code>PROCEDURE DIVISION</code> is where the main logic of the program is implemented.</p>
+</li>
+<li><p>The program accepts a command line argument (<code>CMDARGS</code>) and checks if it is alphabetic. If it is, the program calls the <code>ERROR-PARA</code> routine, which displays an error message and stops the program.</p>
+</li>
+<li><p>If <code>CMDARGS</code> is not alphabetic, it is converted to a numeric value (<code>DECINUM</code>) using the <code>FUNCTION NUMVAL</code> function. If <code>DECINUM</code> is less than 0, the program calls the <code>ERROR-PARA</code> routine.</p>
+</li>
+<li><p>The decimal number <code>DECINUM</code> is then moved to a non-decimal number <code>NUM</code>. If <code>NUM</code> and <code>DECINUM</code> are equal, it means that the input was an integer.</p>
+</li>
+<li><p>The program then checks if the number is divisible by 2 and not equal to 2, or if the number is 1. In either case, the number is not prime, so the program calls the <code>DISPLAY-COMPOSITE</code> routine, which displays &quot;Composite&quot; and stops the program.</p>
+</li>
+<li><p>If the number is not divisible by 2 (or is 2) and is not 1, the program calculates the square root of the number and checks if the number is divisible by any odd number up to the square root. If it is, the program calls the <code>DISPLAY-COMPOSITE</code> routine. If it isn&#39;t, the program displays &quot;Prime&quot; and stops.</p>
+</li>
+<li><p>If <code>NUM</code> and <code>DECINUM</code> are not equal, meaning the input was not an integer, the program calls the <code>ERROR-PARA</code> routine.</p>
+</li>
+</ol>
+<p>The algorithm used here is a basic prime-checking algorithm. It checks divisibility by 2 and then checks divisibility by odd numbers up to the square root of the number. This is a simple and efficient algorithm for checking if a number is prime.</p>
+<p>For more information on COBOL, you can refer to this link: <a href="https://en.wikipedia.org/wiki/COBOL">COBOL</a></p>
+<p>For more information on prime-checking algorithms, you can refer to this link: <a href="https://en.wikipedia.org/wiki/Primality_test">Prime Algorithms</a></p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-flow-diagram">Boost Flow Diagram</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:24:59 PM PDT</p>
+<pre><code class="hljs language-mermaid"><pre class="mermaid">graph TD;
+style Start fill:#228B22, stroke:#000000, stroke-width:2px;
+style ExampleProcess fill:#228B22, stroke:#000000, stroke-width:4px;
+style ExampleErrorPath fill:#B22222, stroke:#000000, stroke-width:2px;
+style ExternalLibrary fill:#FFA500, stroke:#000000, stroke-width:2px;
+
+Start-->CMDARGSValidation;
+CMDARGSValidation-->CMDARGSIsAlphabetic;
+CMDARGSValidation-->CMDARGSIsNumeric;
+CMDARGSIsAlphabetic-->Error;
+CMDARGSIsNumeric-->ConvertCMDARGSToNumeric;
+ConvertCMDARGSToNumeric-->CheckIfNegative;
+CheckIfNegative-->Error;
+CheckIfNegative-->MoveDecimalToNonDecimal;
+MoveDecimalToNonDecimal-->CheckIfInteger;
+CheckIfInteger-->CheckIfEven;
+CheckIfInteger-->CheckIfOne;
+CheckIfInteger-->ComputeSquareRoot;
+ComputeSquareRoot-->IsPrimeLoop;
+IsPrimeLoop-->CheckIfDivisible;
+CheckIfDivisible-->DisplayComposite;
+CheckIfDivisible-->IncrementCounter;
+DisplayComposite-->Stop;
+Error-->Stop;
+CMDARGSIsNumeric-->Error;
+CMDARGSIsAlphabetic-->Error;
+CMDARGSValidation-->Stop;</pre>
+</code></pre><p>The primary path through the code is as follows:</p>
+<ol>
+<li>Start at the <code>CMDARGSValidation</code> block.</li>
+<li>If <code>CMDARGS</code> is alphabetic, go to the <code>Error</code> block.</li>
+<li>If <code>CMDARGS</code> is not alphabetic, check if it is numeric.</li>
+<li>If <code>CMDARGS</code> is not numeric, go to the <code>Error</code> block.</li>
+<li>If <code>CMDARGS</code> is numeric, convert it to a numeric value.</li>
+<li>Check if the converted value is negative.</li>
+<li>If the converted value is negative, go to the <code>Error</code> block.</li>
+<li>If the converted value is not negative, move it to the <code>NUM</code> variable.</li>
+<li>Check if <code>NUM</code> is an integer.</li>
+<li>If <code>NUM</code> is not an integer, go to the <code>Error</code> block.</li>
+<li>If <code>NUM</code> is an integer, check if it is even and not equal to 2.</li>
+<li>If <code>NUM</code> is even and not equal to 2, go to the <code>DisplayComposite</code> block.</li>
+<li>If <code>NUM</code> is not even and not equal to 2, check if it is equal to 1.</li>
+<li>If <code>NUM</code> is equal to 1, go to the <code>DisplayComposite</code> block.</li>
+<li>If <code>NUM</code> is not equal to 1, compute the square root of <code>NUM</code>.</li>
+<li>Enter the <code>IsPrimeLoop</code> loop until <code>CNT</code> is greater than <code>SQRT</code>.</li>
+<li>Check if <code>NUM</code> is divisible by <code>CNT</code>.</li>
+<li>If <code>NUM</code> is divisible by <code>CNT</code>, go to the <code>DisplayComposite</code> block.</li>
+<li>If <code>NUM</code> is not divisible by <code>CNT</code>, increment <code>CNT</code> and continue the loop.</li>
+<li>Display &quot;Prime&quot; and stop the program.</li>
+</ol>
+<p>The error path is as follows:</p>
+<ol>
+<li>Start at the <code>CMDARGSValidation</code> block.</li>
+<li>If <code>CMDARGS</code> is alphabetic, go to the <code>Error</code> block.</li>
+<li>If <code>CMDARGS</code> is not alphabetic, check if it is numeric.</li>
+<li>If <code>CMDARGS</code> is not numeric, go to the <code>Error</code> block.</li>
+<li>If <code>CMDARGS</code> is numeric, convert it to a numeric value.</li>
+<li>Check if the converted value is negative.</li>
+<li>If the converted value is negative, go to the <code>Error</code> block.</li>
+<li>If the converted value is not negative, move it to the <code>NUM</code> variable.</li>
+<li>Check if <code>NUM</code> is an integer.</li>
+<li>If <code>NUM</code> is not an integer, go to the <code>Error</code> block.</li>
+<li>If <code>NUM</code> is an integer, check if it is even and not equal to 2.</li>
+<li>If <code>NUM</code> is even and not equal to 2, go to the <code>DisplayComposite</code> block.</li>
+<li>If <code>NUM</code> is not even and not equal to 2, check if it is equal to 1.</li>
+<li>If <code>NUM</code> is equal to 1, go to the <code>DisplayComposite</code> block.</li>
+<li>If <code>NUM</code> is not equal to 1, compute the square root of <code>NUM</code>.</li>
+<li>Enter the <code>IsPrimeLoop</code> loop until <code>CNT</code> is greater than <code>SQRT</code>.</li>
+<li>Check if <code>NUM</code> is divisible by <code>CNT</code>.</li>
+<li>If <code>NUM</code> is divisible by <code>CNT</code>, go to the <code>DisplayComposite</code> block.</li>
+<li>If <code>NUM</code> is not divisible by <code>CNT</code>, increment <code>CNT</code> and continue the loop.</li>
+<li>Display &quot;Prime&quot; and stop the program.</li>
+</ol>
+<p>Note: The external library or non-standard function is not identified in the provided source code.</p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-security-analysis">Boost Source-Level Security Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:25:08 PM PDT</p>
+<p><strong>No bugs found</strong></p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-performance-analysis">Boost Source-Level Performance Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:25:36 PM PDT</p>
+<ol>
+<li><p><strong>Severity</strong>: 4/10</p>
+<p><strong>Line Number</strong>: 14</p>
+<p><strong>Bug Type</strong>: CPU</p>
+<p><strong>Description</strong>: The program checks if the input is alphabetic and then converts it to its numeric value. This can be optimized by first checking if it&#39;s numeric and then proceeding with the rest of the code.</p>
+<p><strong>Solution</strong>: Check if the input is numeric at the start of the program. If it&#39;s not, display an error message and stop the program. This will save CPU cycles.</p>
+</li>
+<li><p><strong>Severity</strong>: 5/10</p>
+<p><strong>Line Number</strong>: 33</p>
+<p><strong>Bug Type</strong>: CPU</p>
+<p><strong>Description</strong>: The program is using a loop to check if a number is prime. This is an inefficient algorithm that can lead to high CPU usage for large numbers.</p>
+<p><strong>Solution</strong>: Use a more efficient algorithm for checking if a number is prime. For example, you can use the Sieve of Eratosthenes algorithm which is more efficient for large numbers.</p>
+</li>
+</ol>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-data-and-privacy-compliance-analysis">Boost Source-Level Data and Privacy Compliance Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:25:50 PM PDT</p>
+<p><strong>No bugs found</strong></p>
+</div'></div>
+</body>
+</html>

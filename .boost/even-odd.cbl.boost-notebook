@@ -1,0 +1,107 @@
+{
+    "cells": [
+        {
+            "kind": 2,
+            "languageId": "plaintext",
+            "value": "        IDENTIFICATION DIVISION.\n        PROGRAM-ID. EVEN-ODD.\n        DATA DIVISION.\n        WORKING-STORAGE SECTION.\n          01 CMDARGS PIC X(38).\n          01 NUM     PIC S9(30).\n        PROCEDURE DIVISION.\n           ACCEPT CMDARGS FROM COMMAND-LINE.\n           IF CMDARGS IS ALPHABETIC THEN\n              DISPLAY \"Usage: please input a number\"\n              STOP RUN.\n           COMPUTE NUM = FUNCTION NUMVAL(CMDARGS).\n           IF NUM IS NUMERIC THEN\n              IF FUNCTION MOD (NUM, 2) = 0 THEN\n                 DISPLAY \"Even\"\n              ELSE\n                 DISPLAY \"Odd\"\n           ELSE \n              DISPLAY \"Usage: please input a number\"\n           STOP RUN.\n",
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Code Explanation\n\nLast Updated: Saturday, October 21, 2023 at 1:11:12 PM PDT\n\nThis is a COBOL (Common Business-Oriented Language) program. COBOL is a compiled English-like computer programming language designed for business use. It is imperative, procedural and, since 2002, object-oriented. \n\nThe code is designed to determine if a number inputted from the command-line is even or odd. \n\nHere is a breakdown of the code:\n\n1. `IDENTIFICATION DIVISION.` and `PROGRAM-ID. EVEN-ODD.`: These are standard COBOL program headers. They identify the program.\n\n2. `DATA DIVISION.` and `WORKING-STORAGE SECTION.`: This is where variables are declared. \n\n3. `01 CMDARGS PIC X(38).` and `01 NUM PIC S9(30).`: These are variable declarations. `CMDARGS` is a string of up to 38 characters. `NUM` is a signed integer up to 30 digits long.\n\n4. `PROCEDURE DIVISION.`: This is where the program's procedures are defined.\n\n5. `ACCEPT CMDARGS FROM COMMAND-LINE.`: This gets input from the command line and stores it in the `CMDARGS` variable.\n\n6. `IF CMDARGS IS ALPHABETIC THEN...`: This checks if the input is alphabetic. If it is, it displays an error message and ends the program.\n\n7. `COMPUTE NUM = FUNCTION NUMVAL(CMDARGS).`: This converts the string input to a numeric value and stores it in `NUM`.\n\n8. `IF NUM IS NUMERIC THEN...`: This checks if the conversion was successful. If it was not, it displays an error message and ends the program.\n\n9. `IF FUNCTION MOD (NUM, 2) = 0 THEN...`: This checks if the number is even by using the modulus operator. If the remainder of `NUM` divided by 2 is 0, the number is even.\n\n10. `DISPLAY \"Even\"` and `DISPLAY \"Odd\"`: These display the result.\n\nThe algorithm used here is straightforward: it's simply checking if a number is even or odd by using the modulus operator. The modulus operator returns the remainder of a division operation. In this case, it's dividing by 2, so if the remainder is 0, the number is even, and if it's not 0, the number is odd.\n\nFor more information on COBOL, you can visit this link: [COBOL - Wikipedia](https://en.wikipedia.org/wiki/COBOL) \n\nAs for your architectural guidelines, since you mentioned that there are no additional special architectural guidelines or constraints, the code seems to be consistent with general good practices. It has clear variable names, error checking, and is straightforward and easy to understand."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "explainCode",
+                        "details": []
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Flow Diagram\n\nLast Updated: Saturday, October 21, 2023 at 12:32:00 PM PDT\n\n```mermaid\ngraph TD;\nstyle Start fill:#228B22, stroke:#000000, stroke-width:2px;\nstyle Accept fill:#228B22, stroke:#000000, stroke-width:2px;\nstyle Numeric fill:#228B22, stroke:#000000, stroke-width:2px;\nstyle Even fill:#228B22, stroke:#000000, stroke-width:2px;\nstyle Odd fill:#228B22, stroke:#000000, stroke-width:2px;\nstyle Error fill:#B22222, stroke:#000000, stroke-width:2px;\n\nStart-->Accept;\nAccept-->Numeric;\nNumeric-->Even;\nNumeric-->Odd;\nEven-->End;\nOdd-->End;\nError-->End;\n```\n\nThe control flow graph for the given source code is as follows:\n\n- The program starts at the \"Start\" node.\n- The program then goes to the \"Accept\" node, where it accepts the command line arguments.\n- From the \"Accept\" node, the program goes to the \"Numeric\" node, where it checks if the command line argument is numeric.\n- If the command line argument is numeric, the program goes to the \"Even\" node if the number is even, and to the \"Odd\" node if the number is odd.\n- From the \"Even\" and \"Odd\" nodes, the program goes to the \"End\" node, where it displays the result.\n- If the command line argument is not numeric, the program goes to the \"Error\" node, where it displays an error message.\n- From the \"Error\" node, the program also goes to the \"End\" node.\n\nThis control flow graph represents the primary path through the code, as well as the alternate non-error paths and the error path."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "flowDiagram",
+                        "details": []
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Security Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:32:10 PM PDT\n\n**No bugs found**"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "bugAnalysisList",
+                        "details": {}
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Performance Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:32:38 PM PDT\n\n1. **Severity**: 2/10\n\n   **Line Number**: 10\n\n   **Bug Type**: CPU\n\n   **Description**: The program is using the FUNCTION NUMVAL to convert the command line input to a number. This function provides a lot of flexibility, but it is also relatively slow compared to other methods of converting strings to numbers.\n\n   **Solution**: If you know that the input will always be a valid integer, you could use the FUNCTION INTEGER-OF instead, which is faster. However, this would not handle invalid input as gracefully, so you would need to add additional error checking.\n\n\n2. **Severity**: 2/10\n\n   **Line Number**: 12\n\n   **Bug Type**: CPU\n\n   **Description**: The program is using the FUNCTION MOD to determine if a number is even or odd. This is a relatively slow operation, especially for large numbers.\n\n   **Solution**: A faster way to determine if a number is even or odd is to check the least significant bit. If the least significant bit is 0, the number is even; if it is 1, the number is odd. This can be done using bitwise AND operation with 1 (NUM AND 1).\n\n\n"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "performanceList",
+                        "details": [
+                            {
+                                "lineNumber": 11,
+                                "severity": 2,
+                                "bugType": "CPU",
+                                "description": "The program is using the FUNCTION NUMVAL to convert the command line input to a number. This function provides a lot of flexibility, but it is also relatively slow compared to other methods of converting strings to numbers.",
+                                "solution": "If you know that the input will always be a valid integer, you could use the FUNCTION INTEGER-OF instead, which is faster. However, this would not handle invalid input as gracefully, so you would need to add additional error checking."
+                            },
+                            {
+                                "lineNumber": 13,
+                                "severity": 2,
+                                "bugType": "CPU",
+                                "description": "The program is using the FUNCTION MOD to determine if a number is even or odd. This is a relatively slow operation, especially for large numbers.",
+                                "solution": "A faster way to determine if a number is even or odd is to check the least significant bit. If the least significant bit is 0, the number is even; if it is 1, the number is odd. This can be done using bitwise AND operation with 1 (NUM AND 1)."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Data and Privacy Compliance Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:32:51 PM PDT\n\n**No bugs found**"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "complianceCodeList",
+                        "details": {}
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Code Conversion\n\nLast Updated: Saturday, October 21, 2023 at 1:11:42 PM PDT\n\nBased on the explanation and the original code, here is the equivalent Python code:\n\n```python\nimport sys\n\ndef main():\n    try:\n        # Check if a command-line argument was provided\n        if len(sys.argv) != 2:\n            raise ValueError(\"Usage: please input a number\")\n\n        # Try to convert the argument to an integer\n        num = int(sys.argv[1])\n\n        # Check if the number is even or odd\n        if num % 2 == 0:\n            print(\"Even\")\n        else:\n            print(\"Odd\")\n\n    except ValueError:\n        print(\"Usage: please input a number\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\nIn this Python code, `sys.argv` is used to get command-line arguments. `sys.argv[0]` is the script name (it is operating system dependent whether this is a full pathname or not). If the command was executed using the `-c` command line option to the interpreter, `sys.argv[0]` is set to the string `'-c'`. If no script name was passed to the Python interpreter, `sys.argv[0]` is the empty string.\n\n`sys.argv[1]` is the first command-line argument, which in this case should be a number. If it is not provided or cannot be converted to an integer, a `ValueError` is raised and caught, and an error message is displayed. If the number is successfully converted, it is checked for being even or odd, and the result is printed to the console."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "generatedCode",
+                        "details": []
+                    }
+                }
+            ],
+            "metadata": {
+                "id": 0,
+                "type": "originalCode",
+                "lineNumberBase": -1
+            }
+        }
+    ],
+    "metadata": {
+        "defaultDir": ".boost",
+        "sourceFile": "./even-odd.cbl"
+    }
+}

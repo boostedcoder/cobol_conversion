@@ -1,0 +1,107 @@
+{
+    "cells": [
+        {
+            "kind": 2,
+            "languageId": "plaintext",
+            "value": "        IDENTIFICATION DIVISION.\n        PROGRAM-ID. PRIME-NUMBER.\n        DATA DIVISION.\n        WORKING-STORAGE SECTION.\n          01 CMDARGS     PIC X(38).\n          01 DECINUM     PIC S9999v99.\n          01 NUM         PIC S9(7).\n          01 SQRT        PIC 9(7).\n          01 CNT         PIC 9(7) VALUE 3.\n          01 PRIME       PIC 9(1) VALUE 0.\n        PROCEDURE DIVISION.\n           ACCEPT CMDARGS FROM COMMAND-LINE.\n\n           IF CMDARGS IS ALPHABETIC THEN\n              PERFORM ERROR-PARA.\n           \n      * Convert CMDARGS to it's cumeric value\n           COMPUTE DECINUM = FUNCTION NUMVAL(CMDARGS).\n           \n           IF DECINUM < 0 THEN\n              PERFORM ERROR-PARA.\n\n      * Move the Decimal number to Non decimal number\n           MOVE DECINUM TO NUM\n      \n      * If both are equal, then it was an integer\n           IF NUM IS EQUAL TO DECINUM THEN\n              IF FUNCTION MOD (NUM, 2) = 0 AND NUM IS NOT EQUAL TO 2\n                 PERFORM DISPLAY-COMPOSITE\n              ELSE IF NUM IS EQUAL TO 1\n                 PERFORM DISPLAY-COMPOSITE\n              ELSE\n                 COMPUTE SQRT = NUM ** 0.5\n                 PERFORM ISPRIME UNTIL CNT > SQRT\n                 DISPLAY \"Prime\"\n                 STOP RUN\n           ELSE \n              PERFORM ERROR-PARA.\n           \n           \n          ISPRIME.\n            IF FUNCTION MOD (NUM, CNT) = 0 THEN\n               PERFORM DISPLAY-COMPOSITE\n            ELSE\n               COMPUTE CNT = CNT + 1\n            END-IF.\n           \n          DISPLAY-COMPOSITE.\n            DISPLAY \"Composite\"\n            STOP RUN.\n\n          ERROR-PARA.\n           DISPLAY \"Usage: please input a non-negative integer\".\n           STOP RUN.\n",
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Code Explanation\n\nLast Updated: Saturday, October 21, 2023 at 3:00:41 PM PDT\n\nThis code is written in COBOL (COmmon Business Oriented Language), a high-level programming language for business applications. The purpose of this program is to determine whether a given number is prime or composite.\n\nHere is the detailed explanation of the code:\n\n1. `IDENTIFICATION DIVISION.` and `PROGRAM-ID. PRIME-NUMBER.`: These lines are used to identify the program.\n\n2. `DATA DIVISION.` and `WORKING-STORAGE SECTION.`: These lines declare the section where the variables will be defined.\n\n3. Variable Declarations: The variables `CMDARGS`, `DECINUM`, `NUM`, `SQRT`, `CNT`, and `PRIME` are declared with various attributes.\n\n4. `PROCEDURE DIVISION.`: This is where the program's logic is defined.\n\n5. `ACCEPT CMDARGS FROM COMMAND-LINE.`: This line reads the command line argument into the `CMDARGS` variable.\n\n6. The program then checks if the command line argument is alphabetic or negative, in which case it calls `ERROR-PARA` to display an error message and stop the program.\n\n7. The command line argument is then converted to a number using the `FUNCTION NUMVAL(CMDARGS)` function and stored in `DECINUM`.\n\n8. The program then checks if the number is an integer by comparing `DECINUM` and `NUM`. If it's not, it calls `ERROR-PARA`.\n\n9. The program then checks if the number is divisible by 2 (and not equal to 2), or if it's equal to 1, in which case it's not prime and `DISPLAY-COMPOSITE` is called.\n\n10. If the number is not divisible by 2 and not equal to 1, the program calculates the square root of the number and performs the `ISPRIME` procedure until `CNT` is greater than `SQRT`.\n\n11. The `ISPRIME` procedure checks if the number is divisible by `CNT`. If it is, it's not prime and `DISPLAY-COMPOSITE` is called. If it's not, `CNT` is incremented by 1.\n\n12. The `DISPLAY-COMPOSITE` procedure displays \"Composite\" and stops the program.\n\n13. The `ERROR-PARA` procedure displays \"Usage: please input a non-negative integer\" and stops the program.\n\nIn terms of algorithms, this code uses the square root method to check if a number is prime. It divides the number by all numbers up to its square root. If any of these divisions result in a remainder of 0, the number is not prime.\n\nThis code follows the basic principles of structured programming, with clear control structures and procedures. It doesn't appear to conflict with any general architectural guidelines.\n\nFor more information about COBOL, you can visit [COBOL tutorials](https://www.tutorialspoint.com/cobol/index.htm)."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "explainCode",
+                        "details": []
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Flow Diagram\n\nLast Updated: Saturday, October 21, 2023 at 12:24:59 PM PDT\n\n```mermaid\ngraph TD;\nstyle Start fill:#228B22, stroke:#000000, stroke-width:2px;\nstyle ExampleProcess fill:#228B22, stroke:#000000, stroke-width:4px;\nstyle ExampleErrorPath fill:#B22222, stroke:#000000, stroke-width:2px;\nstyle ExternalLibrary fill:#FFA500, stroke:#000000, stroke-width:2px;\n\nStart-->CMDARGSValidation;\nCMDARGSValidation-->CMDARGSIsAlphabetic;\nCMDARGSValidation-->CMDARGSIsNumeric;\nCMDARGSIsAlphabetic-->Error;\nCMDARGSIsNumeric-->ConvertCMDARGSToNumeric;\nConvertCMDARGSToNumeric-->CheckIfNegative;\nCheckIfNegative-->Error;\nCheckIfNegative-->MoveDecimalToNonDecimal;\nMoveDecimalToNonDecimal-->CheckIfInteger;\nCheckIfInteger-->CheckIfEven;\nCheckIfInteger-->CheckIfOne;\nCheckIfInteger-->ComputeSquareRoot;\nComputeSquareRoot-->IsPrimeLoop;\nIsPrimeLoop-->CheckIfDivisible;\nCheckIfDivisible-->DisplayComposite;\nCheckIfDivisible-->IncrementCounter;\nDisplayComposite-->Stop;\nError-->Stop;\nCMDARGSIsNumeric-->Error;\nCMDARGSIsAlphabetic-->Error;\nCMDARGSValidation-->Stop;\n```\n\nThe primary path through the code is as follows:\n1. Start at the `CMDARGSValidation` block.\n2. If `CMDARGS` is alphabetic, go to the `Error` block.\n3. If `CMDARGS` is not alphabetic, check if it is numeric.\n4. If `CMDARGS` is not numeric, go to the `Error` block.\n5. If `CMDARGS` is numeric, convert it to a numeric value.\n6. Check if the converted value is negative.\n7. If the converted value is negative, go to the `Error` block.\n8. If the converted value is not negative, move it to the `NUM` variable.\n9. Check if `NUM` is an integer.\n10. If `NUM` is not an integer, go to the `Error` block.\n11. If `NUM` is an integer, check if it is even and not equal to 2.\n12. If `NUM` is even and not equal to 2, go to the `DisplayComposite` block.\n13. If `NUM` is not even and not equal to 2, check if it is equal to 1.\n14. If `NUM` is equal to 1, go to the `DisplayComposite` block.\n15. If `NUM` is not equal to 1, compute the square root of `NUM`.\n16. Enter the `IsPrimeLoop` loop until `CNT` is greater than `SQRT`.\n17. Check if `NUM` is divisible by `CNT`.\n18. If `NUM` is divisible by `CNT`, go to the `DisplayComposite` block.\n19. If `NUM` is not divisible by `CNT`, increment `CNT` and continue the loop.\n20. Display \"Prime\" and stop the program.\n\nThe error path is as follows:\n1. Start at the `CMDARGSValidation` block.\n2. If `CMDARGS` is alphabetic, go to the `Error` block.\n3. If `CMDARGS` is not alphabetic, check if it is numeric.\n4. If `CMDARGS` is not numeric, go to the `Error` block.\n5. If `CMDARGS` is numeric, convert it to a numeric value.\n6. Check if the converted value is negative.\n7. If the converted value is negative, go to the `Error` block.\n8. If the converted value is not negative, move it to the `NUM` variable.\n9. Check if `NUM` is an integer.\n10. If `NUM` is not an integer, go to the `Error` block.\n11. If `NUM` is an integer, check if it is even and not equal to 2.\n12. If `NUM` is even and not equal to 2, go to the `DisplayComposite` block.\n13. If `NUM` is not even and not equal to 2, check if it is equal to 1.\n14. If `NUM` is equal to 1, go to the `DisplayComposite` block.\n15. If `NUM` is not equal to 1, compute the square root of `NUM`.\n16. Enter the `IsPrimeLoop` loop until `CNT` is greater than `SQRT`.\n17. Check if `NUM` is divisible by `CNT`.\n18. If `NUM` is divisible by `CNT`, go to the `DisplayComposite` block.\n19. If `NUM` is not divisible by `CNT`, increment `CNT` and continue the loop.\n20. Display \"Prime\" and stop the program.\n\nNote: The external library or non-standard function is not identified in the provided source code."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "flowDiagram",
+                        "details": []
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Security Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:25:08 PM PDT\n\n**No bugs found**"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "bugAnalysisList",
+                        "details": {}
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Performance Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:25:36 PM PDT\n\n1. **Severity**: 4/10\n\n   **Line Number**: 14\n\n   **Bug Type**: CPU\n\n   **Description**: The program checks if the input is alphabetic and then converts it to its numeric value. This can be optimized by first checking if it's numeric and then proceeding with the rest of the code.\n\n   **Solution**: Check if the input is numeric at the start of the program. If it's not, display an error message and stop the program. This will save CPU cycles.\n\n\n2. **Severity**: 5/10\n\n   **Line Number**: 33\n\n   **Bug Type**: CPU\n\n   **Description**: The program is using a loop to check if a number is prime. This is an inefficient algorithm that can lead to high CPU usage for large numbers.\n\n   **Solution**: Use a more efficient algorithm for checking if a number is prime. For example, you can use the Sieve of Eratosthenes algorithm which is more efficient for large numbers.\n\n\n"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "performanceList",
+                        "details": [
+                            {
+                                "lineNumber": 15,
+                                "severity": 4,
+                                "bugType": "CPU",
+                                "description": "The program checks if the input is alphabetic and then converts it to its numeric value. This can be optimized by first checking if it's numeric and then proceeding with the rest of the code.",
+                                "solution": "Check if the input is numeric at the start of the program. If it's not, display an error message and stop the program. This will save CPU cycles."
+                            },
+                            {
+                                "lineNumber": 34,
+                                "severity": 5,
+                                "bugType": "CPU",
+                                "description": "The program is using a loop to check if a number is prime. This is an inefficient algorithm that can lead to high CPU usage for large numbers.",
+                                "solution": "Use a more efficient algorithm for checking if a number is prime. For example, you can use the Sieve of Eratosthenes algorithm which is more efficient for large numbers."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Data and Privacy Compliance Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:25:50 PM PDT\n\n**No bugs found**"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "complianceCodeList",
+                        "details": {}
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Code Conversion\n\nLast Updated: Saturday, October 21, 2023 at 3:01:24 PM PDT\n\nBased on your explanation and the original COBOL code, here is the equivalent Python code:\n\n```python\nimport sys\nimport math\n\ndef error_para():\n    print(\"Error: Invalid input\")\n    sys.exit()\n\ndef display_composite():\n    print(\"Composite\")\n    sys.exit()\n\ndef is_prime(num, cnt, sqrt):\n    for cnt in range(3, int(sqrt)+1):\n        if num % cnt == 0:\n            display_composite()\n    print(\"Prime\")\n\ndef main():\n    try:\n        cmdargs = sys.argv[1]\n        if not cmdargs.isnumeric():\n            error_para()\n\n        decinum = float(cmdargs)\n        if decinum < 0:\n            error_para()\n\n        num = int(decinum)\n        if num != decinum:\n            error_para()\n\n        if num == 1 or (num != 2 and num % 2 == 0):\n            display_composite()\n        else:\n            sqrt = math.sqrt(num)\n            is_prime(num, 3, sqrt)\n    except IndexError:\n        error_para()\n\nif __name__ == \"__main__\":\n    main()\n```\n\nThis Python code does the following:\n\n1. It accepts a command-line argument, `cmdargs`.\n2. It checks if `cmdargs` is numeric. If not, it calls `error_para()` to display an error message and stop the program.\n3. It converts `cmdargs` to a float and stores it in `decinum`.\n4. It checks if `decinum` is negative. If it is, it calls `error_para()`.\n5. It converts `decinum` to an integer and stores it in `num`.\n6. It checks if `num` is different from `decinum` (i.e., if `decinum` was not an integer). If it is, it calls `error_para()`.\n7. It checks if `num` is 1 or if it's divisible by 2 (and not equal to 2). If it is, it's not prime and it calls `display_composite()` to display a message and stop the program.\n8. Otherwise, it calculates the square root of `num` and checks if `num` is divisible by any number from 3 to `sqrt`. If it is, it's not prime and it calls `display_composite()`. If it's not, it's prime and it displays \"Prime\"."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "generatedCode",
+                        "details": []
+                    }
+                }
+            ],
+            "metadata": {
+                "id": 0,
+                "type": "originalCode",
+                "lineNumberBase": -1
+            }
+        }
+    ],
+    "metadata": {
+        "defaultDir": ".boost",
+        "sourceFile": "./prime-number.cbl"
+    }
+}

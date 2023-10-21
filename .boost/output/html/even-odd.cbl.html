@@ -1,0 +1,246 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"; mermaid.initialize({ startOnLoad: true });</script>
+    <style>
+        @page {
+            margin: 2cm;
+            size: letter;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 24px;
+            border-bottom: 2px solid #666;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.0;
+            overflow-x: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 10px;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 10px;
+        }
+
+        /* Use this class for analysis sections */
+        .analysis-section {
+            padding-top: 16px;
+            margin-top: 24px;
+            font-size: 12px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .new-page-section {
+            page-break-before: always;
+        }
+
+        .analysis-section h1, .analysis-section h2 {
+            color: #444;
+        }
+
+        .analysis-section p {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Polyverse Boost Source Analysis Details: ./even-odd.cbl</h1>
+    <p>Date Generated: Saturday, October 21, 2023 at 12:32:51 PM PDT</p>
+    <div class="><hr>
+<h3 id="boost-architectural-quick-summary-security-report">Boost Architectural Quick Summary Security Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:32:14 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p><div class="new-page-section><hr>
+<h3 id="boost-architectural-quick-summary-performance-report">Boost Architectural Quick Summary Performance Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:32:42 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p><div class="new-page-section><hr>
+<h3 id="boost-architectural-quick-summary-compliance-report">Boost Architectural Quick Summary Compliance Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:32:55 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p>
+    <h1>Detailed Analysis</h1><div>
+                    <h2>./even-odd.cbl line 0:</h2>
+                    <p>Programming Language: plaintext</p>
+                    <pre><code>        IDENTIFICATION DIVISION.
+        PROGRAM-ID. EVEN-ODD.
+        DATA DIVISION.
+        WORKING-<span class="hljs-keyword">STORAGE</span> SECTION.
+          <span class="hljs-number">01</span> CMDARGS PIC X(<span class="hljs-number">38</span>).
+          <span class="hljs-number">01</span> NUM     PIC S9(<span class="hljs-number">30</span>).
+        <span class="hljs-keyword">PROCEDURE</span> DIVISION.
+           ACCEPT CMDARGS <span class="hljs-keyword">FROM</span> COMMAND-<span class="hljs-type">LINE</span>.
+           <span class="hljs-keyword">IF</span> CMDARGS <span class="hljs-keyword">IS</span> ALPHABETIC <span class="hljs-keyword">THEN</span>
+              DISPLAY &quot;Usage: please input a number&quot;
+              STOP RUN.
+           COMPUTE NUM = <span class="hljs-keyword">FUNCTION</span> NUMVAL(CMDARGS).
+           <span class="hljs-keyword">IF</span> NUM <span class="hljs-keyword">IS</span> <span class="hljs-type">NUMERIC</span> <span class="hljs-keyword">THEN</span>
+              <span class="hljs-keyword">IF</span> <span class="hljs-keyword">FUNCTION</span> MOD (NUM, <span class="hljs-number">2</span>) = <span class="hljs-number">0</span> <span class="hljs-keyword">THEN</span>
+                 DISPLAY &quot;Even&quot;
+              <span class="hljs-keyword">ELSE</span>
+                 DISPLAY &quot;Odd&quot;
+           <span class="hljs-keyword">ELSE</span> 
+              DISPLAY &quot;Usage: please input a number&quot;
+           STOP RUN.
+</code></pre>
+                </div><div class='analysis-section'><div class='output-item'><hr>
+<h3 id="boost-code-explanation">Boost Code Explanation</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:31:47 PM PDT</p>
+<p>This code is written in COBOL (Common Business-Oriented Language), a compiled English-like computer programming language designed for business use. COBOL is primarily used in business, finance, and administrative systems for companies and governments.</p>
+<p>The code is for a simple program that checks if a number is even or odd. Here&#39;s a breakdown of what the code does:</p>
+<ol>
+<li><p>The <code>IDENTIFICATION DIVISION</code> and <code>PROGRAM-ID</code> are basic parts of a COBOL program. They simply identify the program. In this case, the program is named <code>EVEN-ODD</code>.</p>
+</li>
+<li><p>The <code>DATA DIVISION</code> and <code>WORKING-STORAGE SECTION</code> define the data items that the program will use. In this case, there are two data items: <code>CMDARGS</code> and <code>NUM</code>. <code>CMDARGS</code> is a string of up to 38 characters, and <code>NUM</code> is a signed integer of up to 30 digits.</p>
+</li>
+<li><p>The <code>PROCEDURE DIVISION</code> contains the executable part of the program.</p>
+</li>
+<li><p>The <code>ACCEPT CMDARGS FROM COMMAND-LINE.</code> statement gets the command-line argument and stores it in <code>CMDARGS</code>.</p>
+</li>
+<li><p>The program then checks if <code>CMDARGS</code> is alphabetic. If it is, the program displays a usage message and then stops.</p>
+</li>
+<li><p>If <code>CMDARGS</code> is not alphabetic, the program uses the <code>FUNCTION NUMVAL</code> to convert <code>CMDARGS</code> to a numeric value and stores it in <code>NUM</code>.</p>
+</li>
+<li><p>The program then checks if <code>NUM</code> is numeric. If it is not, the program displays a usage message and then stops.</p>
+</li>
+<li><p>If <code>NUM</code> is numeric, the program checks if <code>NUM</code> is even by using the <code>FUNCTION MOD</code> to calculate the remainder of <code>NUM</code> divided by 2. If the remainder is 0, the program displays &quot;Even&quot;. Otherwise, it displays &quot;Odd&quot;.</p>
+</li>
+</ol>
+<p>The algorithm used in this program is the modulo operation to determine whether a number is even or odd. The modulo operation finds the remainder after division of one number by another (sometimes called modulus).</p>
+<p>In terms of the architectural guidelines, as there are no additional special architectural guidelines or constraints mentioned for this software project, this code appears to be consistent with general good coding practices.</p>
+<p>For more information on COBOL, you can refer to this link: <a href="https://en.wikipedia.org/wiki/COBOL">https://en.wikipedia.org/wiki/COBOL</a> </p>
+<p>For more details on the modulo operation, you can refer to this link: <a href="https://en.wikipedia.org/wiki/Modulo_operation">https://en.wikipedia.org/wiki/Modulo_operation</a></p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-flow-diagram">Boost Flow Diagram</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:32:00 PM PDT</p>
+<pre><code class="hljs language-mermaid"><pre class="mermaid">graph TD;
+style Start fill:#228B22, stroke:#000000, stroke-width:2px;
+style Accept fill:#228B22, stroke:#000000, stroke-width:2px;
+style Numeric fill:#228B22, stroke:#000000, stroke-width:2px;
+style Even fill:#228B22, stroke:#000000, stroke-width:2px;
+style Odd fill:#228B22, stroke:#000000, stroke-width:2px;
+style Error fill:#B22222, stroke:#000000, stroke-width:2px;
+
+Start-->Accept;
+Accept-->Numeric;
+Numeric-->Even;
+Numeric-->Odd;
+Even-->End;
+Odd-->End;
+Error-->End;</pre>
+</code></pre><p>The control flow graph for the given source code is as follows:</p>
+<ul>
+<li>The program starts at the &quot;Start&quot; node.</li>
+<li>The program then goes to the &quot;Accept&quot; node, where it accepts the command line arguments.</li>
+<li>From the &quot;Accept&quot; node, the program goes to the &quot;Numeric&quot; node, where it checks if the command line argument is numeric.</li>
+<li>If the command line argument is numeric, the program goes to the &quot;Even&quot; node if the number is even, and to the &quot;Odd&quot; node if the number is odd.</li>
+<li>From the &quot;Even&quot; and &quot;Odd&quot; nodes, the program goes to the &quot;End&quot; node, where it displays the result.</li>
+<li>If the command line argument is not numeric, the program goes to the &quot;Error&quot; node, where it displays an error message.</li>
+<li>From the &quot;Error&quot; node, the program also goes to the &quot;End&quot; node.</li>
+</ul>
+<p>This control flow graph represents the primary path through the code, as well as the alternate non-error paths and the error path.</p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-security-analysis">Boost Source-Level Security Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:32:10 PM PDT</p>
+<p><strong>No bugs found</strong></p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-performance-analysis">Boost Source-Level Performance Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:32:38 PM PDT</p>
+<ol>
+<li><p><strong>Severity</strong>: 2/10</p>
+<p><strong>Line Number</strong>: 10</p>
+<p><strong>Bug Type</strong>: CPU</p>
+<p><strong>Description</strong>: The program is using the FUNCTION NUMVAL to convert the command line input to a number. This function provides a lot of flexibility, but it is also relatively slow compared to other methods of converting strings to numbers.</p>
+<p><strong>Solution</strong>: If you know that the input will always be a valid integer, you could use the FUNCTION INTEGER-OF instead, which is faster. However, this would not handle invalid input as gracefully, so you would need to add additional error checking.</p>
+</li>
+<li><p><strong>Severity</strong>: 2/10</p>
+<p><strong>Line Number</strong>: 12</p>
+<p><strong>Bug Type</strong>: CPU</p>
+<p><strong>Description</strong>: The program is using the FUNCTION MOD to determine if a number is even or odd. This is a relatively slow operation, especially for large numbers.</p>
+<p><strong>Solution</strong>: A faster way to determine if a number is even or odd is to check the least significant bit. If the least significant bit is 0, the number is even; if it is 1, the number is odd. This can be done using bitwise AND operation with 1 (NUM AND 1).</p>
+</li>
+</ol>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-data-and-privacy-compliance-analysis">Boost Source-Level Data and Privacy Compliance Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:32:51 PM PDT</p>
+<p><strong>No bugs found</strong></p>
+</div'></div>
+</body>
+</html>

@@ -1,0 +1,516 @@
+{
+  "dataFormatVersion": "1.6.2",
+  "summary": {
+    "projectName": "cobol",
+    "summaryUrl": ".boost/cobol.summary.boost-notebook",
+    "filesToAnalyze": 6,
+    "filesAnalyzed": 6,
+    "issues": []
+  },
+  "sectionSummary": {
+    "summary": {
+      "analysisType": "summary",
+      "status": "not-started",
+      "completedCells": 0,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 0,
+      "filesAnalyzed": 0
+    },
+    "explainCode": {
+      "analysisType": "explainCode",
+      "status": "completed",
+      "completedCells": 8,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 8,
+      "filesAnalyzed": 7
+    },
+    "flowDiagram": {
+      "analysisType": "flowDiagram",
+      "status": "completed",
+      "completedCells": 8,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 8,
+      "filesAnalyzed": 7
+    },
+    "bugAnalysisList": {
+      "analysisType": "bugAnalysisList",
+      "status": "completed",
+      "completedCells": 8,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 8,
+      "filesAnalyzed": 7
+    },
+    "bugAnalysis": {
+      "analysisType": "bugAnalysis",
+      "status": "not-started",
+      "completedCells": 0,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 1,
+      "filesAnalyzed": 1
+    },
+    "performanceList": {
+      "analysisType": "performanceList",
+      "status": "completed",
+      "completedCells": 8,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 8,
+      "filesAnalyzed": 7
+    },
+    "performance": {
+      "analysisType": "performance",
+      "status": "not-started",
+      "completedCells": 0,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 2,
+      "filesAnalyzed": 1
+    },
+    "complianceCodeList": {
+      "analysisType": "complianceCodeList",
+      "status": "completed",
+      "completedCells": 8,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 8,
+      "filesAnalyzed": 7
+    },
+    "complianceCode": {
+      "analysisType": "complianceCode",
+      "status": "not-started",
+      "completedCells": 0,
+      "errorCells": 0,
+      "issueCells": 0,
+      "totalCells": 3,
+      "filesAnalyzed": 1
+    }
+  },
+  "files": {
+    "hello-world.cbl": {
+      "sourceRelFile": "./hello-world.cbl",
+      "notebookRelFile": ".boost/hello-world.cbl.boost-notebook",
+      "totalCells": 1,
+      "completedCells": 1,
+      "errorCells": 0,
+      "issueCells": 0,
+      "sections": {
+        "explainCode": {
+          "analysisType": "explainCode",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "flowDiagram": {
+          "analysisType": "flowDiagram",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "bugAnalysisList": {
+          "analysisType": "bugAnalysisList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "performanceList": {
+          "analysisType": "performanceList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "complianceCodeList": {
+          "analysisType": "complianceCodeList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        }
+      }
+    },
+    "README.md": {
+      "sourceRelFile": "./README.md",
+      "notebookRelFile": ".boost/README.md.boost-notebook",
+      "totalCells": 1,
+      "completedCells": 1,
+      "errorCells": 0,
+      "issueCells": 0,
+      "sections": {
+        "explainCode": {
+          "analysisType": "explainCode",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "flowDiagram": {
+          "analysisType": "flowDiagram",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "bugAnalysisList": {
+          "analysisType": "bugAnalysisList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "performanceList": {
+          "analysisType": "performanceList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "complianceCodeList": {
+          "analysisType": "complianceCodeList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        }
+      }
+    },
+    "prime-number.cbl": {
+      "sourceRelFile": "./prime-number.cbl",
+      "notebookRelFile": ".boost/prime-number.cbl.boost-notebook",
+      "totalCells": 1,
+      "completedCells": 1,
+      "errorCells": 0,
+      "issueCells": 1,
+      "sections": {
+        "explainCode": {
+          "analysisType": "explainCode",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "flowDiagram": {
+          "analysisType": "flowDiagram",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "bugAnalysisList": {
+          "analysisType": "bugAnalysisList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "performanceList": {
+          "analysisType": "performanceList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 1,
+          "totalCells": 1,
+          "filesAnalyzed": 1,
+          "details": [
+            {
+              "lineNumber": 15,
+              "severity": 4,
+              "bugType": "CPU",
+              "description": "The program checks if the input is alphabetic and then converts it to its numeric value. This can be optimized by first checking if it's numeric and then proceeding with the rest of the code.",
+              "solution": "Check if the input is numeric at the start of the program. If it's not, display an error message and stop the program. This will save CPU cycles."
+            },
+            {
+              "lineNumber": 34,
+              "severity": 5,
+              "bugType": "CPU",
+              "description": "The program is using a loop to check if a number is prime. This is an inefficient algorithm that can lead to high CPU usage for large numbers.",
+              "solution": "Use a more efficient algorithm for checking if a number is prime. For example, you can use the Sieve of Eratosthenes algorithm which is more efficient for large numbers."
+            }
+          ]
+        },
+        "complianceCodeList": {
+          "analysisType": "complianceCodeList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        }
+      }
+    },
+    "factorial.cbl": {
+      "sourceRelFile": "./factorial.cbl",
+      "notebookRelFile": ".boost/factorial.cbl.boost-notebook",
+      "totalCells": 1,
+      "completedCells": 1,
+      "errorCells": 0,
+      "issueCells": 1,
+      "sections": {
+        "explainCode": {
+          "analysisType": "explainCode",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "flowDiagram": {
+          "analysisType": "flowDiagram",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "bugAnalysisList": {
+          "analysisType": "bugAnalysisList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "performanceList": {
+          "analysisType": "performanceList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 1,
+          "totalCells": 1,
+          "filesAnalyzed": 1,
+          "details": [
+            {
+              "lineNumber": 15,
+              "severity": 4,
+              "bugType": "CPU",
+              "description": "The use of FUNCTION NUMVAL for converting string to number is CPU-intensive. This function performs a lot of unnecessary checks for a simple integer conversion.",
+              "solution": "Use a simpler conversion function or method if available in the COBOL version you are using. If not, consider writing a custom conversion routine that does the bare minimum required for your specific use case."
+            },
+            {
+              "lineNumber": 34,
+              "severity": 6,
+              "bugType": "CPU",
+              "description": "The factorial calculation is done using a loop which is not efficient for large numbers. This can lead to high CPU usage and long execution times.",
+              "solution": "Consider using a more efficient algorithm for calculating factorial. For example, you could use a recursive function or utilize a memoization technique to store previously calculated results. However, be aware that recursion in COBOL can be tricky and may not be supported in all versions."
+            },
+            {
+              "lineNumber": 41,
+              "severity": 3,
+              "bugType": "Memory",
+              "description": "The INSPECT TALLYING FOR LEADING ZEROS operation is not efficient as it scans the entire string. This can be memory-intensive for large strings.",
+              "solution": "Consider using a more efficient method to remove leading zeros. For example, you could write a loop that iterates over the string from the beginning and stops when it encounters a non-zero character."
+            }
+          ]
+        },
+        "complianceCodeList": {
+          "analysisType": "complianceCodeList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        }
+      }
+    },
+    "testinfo.yml": {
+      "sourceRelFile": "./testinfo.yml",
+      "notebookRelFile": ".boost/testinfo.yml.boost-notebook",
+      "totalCells": 2,
+      "completedCells": 2,
+      "errorCells": 0,
+      "issueCells": 1,
+      "sections": {
+        "explainCode": {
+          "analysisType": "explainCode",
+          "status": "completed",
+          "completedCells": 2,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 2,
+          "filesAnalyzed": 1
+        },
+        "flowDiagram": {
+          "analysisType": "flowDiagram",
+          "status": "completed",
+          "completedCells": 2,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 2,
+          "filesAnalyzed": 1
+        },
+        "bugAnalysisList": {
+          "analysisType": "bugAnalysisList",
+          "status": "completed",
+          "completedCells": 2,
+          "errorCells": 0,
+          "issueCells": 1,
+          "totalCells": 2,
+          "filesAnalyzed": 1,
+          "details": [
+            {
+              "lineNumber": 8,
+              "severity": 7,
+              "bugType": "Command Injection",
+              "description": "The code is using a user-provided variable 'source.name' directly in a command execution context. This can lead to command injection if the user-provided string contains malicious characters or sequences. Command injection vulnerabilities allow an attacker to manipulate the command the system is running and can lead to arbitrary command execution.",
+              "solution": "Avoid using user-provided input in command execution contexts. If it's unavoidable, sanitize and validate the user-provided input strictly before using it. Consider using safer alternatives to command execution, like built-in library functions. For more information, refer to OWASP Command Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html"
+            }
+          ]
+        },
+        "performanceList": {
+          "analysisType": "performanceList",
+          "status": "completed",
+          "completedCells": 2,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 2,
+          "filesAnalyzed": 1
+        },
+        "complianceCodeList": {
+          "analysisType": "complianceCodeList",
+          "status": "completed",
+          "completedCells": 2,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 2,
+          "filesAnalyzed": 1
+        }
+      }
+    },
+    "even-odd.cbl": {
+      "sourceRelFile": "./even-odd.cbl",
+      "notebookRelFile": ".boost/even-odd.cbl.boost-notebook",
+      "totalCells": 1,
+      "completedCells": 1,
+      "errorCells": 0,
+      "issueCells": 1,
+      "sections": {
+        "explainCode": {
+          "analysisType": "explainCode",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "flowDiagram": {
+          "analysisType": "flowDiagram",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "bugAnalysisList": {
+          "analysisType": "bugAnalysisList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        },
+        "performanceList": {
+          "analysisType": "performanceList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 1,
+          "totalCells": 1,
+          "filesAnalyzed": 1,
+          "details": [
+            {
+              "lineNumber": 11,
+              "severity": 2,
+              "bugType": "CPU",
+              "description": "The program is using the FUNCTION NUMVAL to convert the command line input to a number. This function provides a lot of flexibility, but it is also relatively slow compared to other methods of converting strings to numbers.",
+              "solution": "If you know that the input will always be a valid integer, you could use the FUNCTION INTEGER-OF instead, which is faster. However, this would not handle invalid input as gracefully, so you would need to add additional error checking."
+            },
+            {
+              "lineNumber": 13,
+              "severity": 2,
+              "bugType": "CPU",
+              "description": "The program is using the FUNCTION MOD to determine if a number is even or odd. This is a relatively slow operation, especially for large numbers.",
+              "solution": "A faster way to determine if a number is even or odd is to check the least significant bit. If the least significant bit is 0, the number is even; if it is 1, the number is odd. This can be done using bitwise AND operation with 1 (NUM AND 1)."
+            }
+          ]
+        },
+        "complianceCodeList": {
+          "analysisType": "complianceCodeList",
+          "status": "completed",
+          "completedCells": 1,
+          "errorCells": 0,
+          "issueCells": 0,
+          "totalCells": 1,
+          "filesAnalyzed": 1
+        }
+      }
+    }
+  },
+  "account": {
+    "refreshed": true,
+    "enabled": true,
+    "status": "paid",
+    "trialRemaining": 0,
+    "usageThisMonth": 907.64,
+    "discountedUsage": 100,
+    "balanceDue": 807.64,
+    "couponType": "Polyverse Boost Free Trial",
+    "org": "polyverse-appsec",
+    "owner": "alex@polyverse.io",
+    "created": "2023-05-06",
+    "creditCardLinked": false
+  },
+  "uiState": {
+    "analysisState": "analyzing",
+    "activityBarState": {
+      "summaryViewState": {
+        "analysisMode": "analyze-all-mode",
+        "analysisTypesState": {
+          "security": true,
+          "compliance": true,
+          "documentation": true
+        }
+      }
+    }
+  }
+}

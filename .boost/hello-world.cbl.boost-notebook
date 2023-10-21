@@ -1,0 +1,92 @@
+{
+    "cells": [
+        {
+            "kind": 2,
+            "languageId": "plaintext",
+            "value": "        IDENTIFICATION DIVISION.\n        PROGRAM-ID. HELLO-WORLD.\n        PROCEDURE DIVISION.\n            DISPLAY \"Hello, World!\"\n        STOP RUN.\n",
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Code Explanation\n\nLast Updated: Saturday, October 21, 2023 at 1:16:11 PM PDT\n\nThis is a simple program written in COBOL (Common Business-Oriented Language). COBOL is a compiled English-like computer programming language designed for business use. It is imperative, procedural, and, since 2002, object-oriented. COBOL is primarily used in business, finance, and administrative systems for companies and governments.\n\nThis program simply prints \"Hello, World!\" to the console.\n\nHere's a breakdown of the code:\n\n- `IDENTIFICATION DIVISION.`: This is a mandatory division in every COBOL program. It identifies the program by giving it a name which is `HELLO-WORLD` in this case.\n- `PROGRAM-ID.`: This is a paragraph within the Identification Division. It specifies the name of the program.\n- `HELLO-WORLD.`: This is the name of the program.\n- `PROCEDURE DIVISION.`: This is where the program logic is written. It is the section of the program where all the procedures are written and the actual processing is done.\n- `DISPLAY \"Hello, World!\"`: This is a simple command to print the string \"Hello, World!\" to the console.\n- `STOP RUN.`: This is the COBOL equivalent of `return` in languages like C or Java. It signals the end of the program.\n\nThis program does not use any complex algorithms. It's a simple, linear piece of code that runs top to bottom with no decision-making or looping constructs. \n\nFor more information on COBOL, you can refer to this link: [COBOL tutorial](https://www.tutorialspoint.com/cobol/index.htm)\n\nAs for architectural guidelines, this simple program doesn't conflict with any architectural principles. It's too simple to have architectural issues. However, for larger COBOL programs, it's important to keep in mind principles like modularity, readability, and maintainability. COBOL's verbose syntax can make it easier to write self-documenting code, but it's still important to structure programs in a way that makes them easy to understand and modify."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "explainCode",
+                        "details": []
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Flow Diagram\n\nLast Updated: Saturday, October 21, 2023 at 12:21:21 PM PDT\n\n```mermaid\ngraph TD;\nstyle Start fill:#228B22, stroke:#000000, stroke-width:2px;\nstyle ExampleProcess fill:#228B22, stroke:#000000, stroke-width:4px;\n\nStart-->ExampleProcess;\n```\nThe control flow graph for the given source code is a simple linear flow. The program starts at the \"Start\" node and proceeds to the \"ExampleProcess\" node, where the \"DISPLAY\" statement is executed to display the message \"Hello, World!\". After that, the program ends."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "flowDiagram",
+                        "details": []
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Security Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:21:38 PM PDT\n\n**No bugs found**"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "bugAnalysisList",
+                        "details": {}
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Performance Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:21:58 PM PDT\n\n**No bugs found**"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "performanceList",
+                        "details": {}
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Source-Level Data and Privacy Compliance Analysis\n\nLast Updated: Saturday, October 21, 2023 at 12:22:18 PM PDT\n\n**No bugs found**"
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "complianceCodeList",
+                        "details": {}
+                    }
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/markdown",
+                            "data": "\n\n---\n\n### Boost Code Conversion\n\nLast Updated: Saturday, October 21, 2023 at 1:16:32 PM PDT\n\nBased on the explanation, the equivalent Python code would be:\n\n```python\n# define a function named hello_world\ndef hello_world():\n    # print \"Hello, World!\" to the console\n    print(\"Hello, World!\")\n\n# call the function hello_world\nhello_world()\n```\n\nThis Python program does exactly the same thing as the original COBOL program. It defines a function named `hello_world` that prints the string \"Hello, World!\" to the console, and then it calls this function. \n\nIn Python, we use the `print` statement to output data to the standard output device (screen). We also use indentation to represent a block of code. All code within the same block level is supposed to have the same amount of indentation in Python. \n\nThe `def` keyword is a statement for defining a function in Python. You start a function with the `def` keyword, specify a name followed by a colon (:) sign. The \"def\" call creates the function object and assigns it to the name given. You can further re-assign the same function object to other names. \n\nIn this Python code, there are no libraries or frameworks used. It's a simple and straightforward code that follows the Python coding conventions and does not violate any architectural principles."
+                        }
+                    ],
+                    "metadata": {
+                        "outputType": "generatedCode",
+                        "details": []
+                    }
+                }
+            ],
+            "metadata": {
+                "id": 0,
+                "type": "originalCode",
+                "lineNumberBase": -1
+            }
+        }
+    ],
+    "metadata": {
+        "defaultDir": ".boost",
+        "sourceFile": "./hello-world.cbl"
+    }
+}

@@ -1,0 +1,290 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"; mermaid.initialize({ startOnLoad: true });</script>
+    <style>
+        @page {
+            margin: 2cm;
+            size: letter;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 24px;
+            border-bottom: 2px solid #666;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.0;
+            overflow-x: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 10px;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 10px;
+        }
+
+        /* Use this class for analysis sections */
+        .analysis-section {
+            padding-top: 16px;
+            margin-top: 24px;
+            font-size: 12px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .new-page-section {
+            page-break-before: always;
+        }
+
+        .analysis-section h1, .analysis-section h2 {
+            color: #444;
+        }
+
+        .analysis-section p {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Polyverse Boost Source Analysis Details: ./factorial.cbl</h1>
+    <p>Date Generated: Saturday, October 21, 2023 at 12:27:56 PM PDT</p>
+    <div class="><hr>
+<h3 id="boost-architectural-quick-summary-security-report">Boost Architectural Quick Summary Security Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:27:12 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p><div class="new-page-section><hr>
+<h3 id="boost-architectural-quick-summary-performance-report">Boost Architectural Quick Summary Performance Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:27:46 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p><div class="new-page-section><hr>
+<h3 id="boost-architectural-quick-summary-compliance-report">Boost Architectural Quick Summary Compliance Report</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:28:00 PM PDT</p>
+<p>Executive Report:</p>
+<ol>
+<li><strong>Architectural Impact</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Risk Analysis</strong>: The analysis of this file has not revealed any severe issues.</li>
+<li><strong>Potential Customer Impact</strong>: Based on the analysis, there are no severe issues that could potentially impact customers.</li>
+<li><strong>Performance Issues</strong>: Our analysis did not identify any explicit performance issues in the file.</li>
+<li><strong>Risk Assessment</strong>: Based on the current analysis of this file, no severe issues have been found. However, this doesn&#39;t guarantee that the file is risk-free.</li>
+</ol>
+<p>Highlights:</p>
+<ul>
+<li>No severe issues were identified in the current analysis of this file.</li>
+</ul>
+</div><p></p>
+    <h1>Detailed Analysis</h1><div>
+                    <h2>./factorial.cbl line 0:</h2>
+                    <p>Programming Language: plaintext</p>
+                    <pre><code>        IDENTIFICATION DIVISION.
+        <span class="hljs-keyword">PROGRAM</span>-ID. FACTORIAL.
+        DATA DIVISION.
+        WORKING-STORAGE SECTION.
+          01 CMD-<span class="hljs-keyword">ARGS</span>                  PIC X(38).
+          01 DECINUM                  PIC S9999v99.
+          01 NUM                      PIC S9(7).
+          01 FACTORIAL                PIC 9(15) VALUE 1.
+          01 LEFT-JUST-NUMBER         PIC X(16).
+          01 WS-TALLY1                PIC 99 VALUE 0.
+          01 CNT                      PIC 9(7) VALUE 1.
+
+        PROCEDURE DIVISION.
+           ACCEPT CMD-<span class="hljs-keyword">ARGS</span> FROM COMMAND-<span class="hljs-keyword">LINE</span>.
+
+           <span class="hljs-keyword">IF</span> CMD-<span class="hljs-keyword">ARGS</span> IS ALPHABETIC THEN
+              PERFORM <span class="hljs-keyword">ERROR</span>-PARA.
+           
+<span class="hljs-comment">      * Convert CMDARGS to it&#x27;s numeric value</span>
+           COMPUTE DECINUM = FUNCTION NUMVAL(CMD-<span class="hljs-keyword">ARGS</span>).
+           
+           <span class="hljs-keyword">IF</span> DECINUM &lt; 0 THEN
+              PERFORM <span class="hljs-keyword">ERROR</span>-PARA.
+
+<span class="hljs-comment">      * Move the Decimal number to Non decimal number</span>
+           <span class="hljs-keyword">MOVE</span> DECINUM TO NUM
+      
+<span class="hljs-comment">      * If both are equal, then it was an integer</span>
+           <span class="hljs-keyword">IF</span> NUM IS EQUAL TO DECINUM THEN
+              <span class="hljs-keyword">IF</span> NUM IS EQUAL TO 0 OR NUM IS EQUAL TO 1 THEN
+                 <span class="hljs-keyword">DISPLAY</span> 1
+                 STOP <span class="hljs-keyword">RUN</span>                 
+              <span class="hljs-keyword">ELSE</span>
+                 PERFORM CALC-<span class="hljs-keyword">FACT</span> UNTIL CNT &gt; NUM
+      
+<span class="hljs-comment">      * Process to left justify the number</span>
+                 <span class="hljs-keyword">INSPECT</span> FACTORIAL TALLYING WS-TALLY1 <span class="hljs-keyword">FOR</span> LEADING ZEROS
+                 <span class="hljs-keyword">Move</span> FACTORIAL (WS-TALLY1 + 1 :) TO LEFT-JUST-NUMBER
+<span class="hljs-comment">      * Display the left justified result</span>
+                 <span class="hljs-keyword">DISPLAY</span> LEFT-JUST-NUMBER
+                 STOP <span class="hljs-keyword">RUN</span>
+           <span class="hljs-keyword">ELSE</span> 
+              PERFORM <span class="hljs-keyword">ERROR</span>-PARA.
+           
+           
+          CALC-<span class="hljs-keyword">FACT</span>.
+            COMPUTE FACTORIAL = FACTORIAL * CNT
+            COMPUTE CNT = CNT + 1.
+
+          <span class="hljs-keyword">ERROR</span>-PARA.
+           <span class="hljs-keyword">DISPLAY</span> <span class="hljs-string">&quot;Usage: please input a non-negative integer&quot;</span>.
+           STOP <span class="hljs-keyword">RUN</span>.
+</code></pre>
+                </div><div class='analysis-section'><div class='output-item'><hr>
+<h3 id="boost-code-explanation">Boost Code Explanation</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:26:43 PM PDT</p>
+<p>The code you provided is written in COBOL (Common Business-Oriented Language), a programming language that is primarily used in business, finance, and administrative systems.</p>
+<p>The program calculates the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.</p>
+<p>Here is a detailed explanation of the code:</p>
+<ol>
+<li><p><strong>IDENTIFICATION DIVISION and PROGRAM-ID</strong>: This is the program identification section where the program is named.</p>
+</li>
+<li><p><strong>DATA DIVISION and WORKING-STORAGE SECTION</strong>: In this section, all the variables used in the program are declared.</p>
+</li>
+<li><p><strong>PROCEDURE DIVISION</strong>: This division contains the actual logic of the program.</p>
+</li>
+<li><p><strong>ACCEPT CMD-ARGS FROM COMMAND-LINE</strong>: The program accepts a command-line argument and stores it in the variable <code>CMD-ARGS</code>.</p>
+</li>
+<li><p>It then checks if <code>CMD-ARGS</code> is alphabetic. If it is, it performs <code>ERROR-PARA</code> which displays an error message and stops the program.</p>
+</li>
+<li><p>If <code>CMD-ARGS</code> is not alphabetic, it converts <code>CMD-ARGS</code> to its numeric value and stores it in <code>DECINUM</code>. If <code>DECINUM</code> is negative, it performs <code>ERROR-PARA</code>.</p>
+</li>
+<li><p>The decimal number is then moved to a non-decimal number (<code>NUM</code>). If <code>NUM</code> and <code>DECINUM</code> are equal, it means the input was an integer.</p>
+</li>
+<li><p>If <code>NUM</code> is 0 or 1, it displays 1 and stops the program because the factorial of 0 and 1 is 1.</p>
+</li>
+<li><p>If <code>NUM</code> is greater than 1, it calculates the factorial of <code>NUM</code> by repeatedly multiplying <code>FACTORIAL</code> by <code>CNT</code> (which starts at 1 and is incremented by 1 each time) until <code>CNT</code> is greater than <code>NUM</code>.</p>
+</li>
+<li><p>It then left justifies the result by tallying the number of leading zeros in <code>FACTORIAL</code> and moving the characters in <code>FACTORIAL</code> from the position after the leading zeros to <code>LEFT-JUST-NUMBER</code>.</p>
+</li>
+<li><p>Finally, it displays the left justified result and stops the program.</p>
+</li>
+<li><p>If <code>NUM</code> and <code>DECINUM</code> are not equal, it means the input was not an integer and it performs <code>ERROR-PARA</code>.</p>
+</li>
+</ol>
+<p>The algorithm used in this code is a simple loop that calculates the factorial of a number. It does not use any special algorithms or data structures.</p>
+<p>For more information on COBOL, you can visit this link: <a href="https://www.tutorialspoint.com/cobol/index.htm">COBOL tutorial</a></p>
+<p>As per your architectural guidelines, this code doesn&#39;t conflict with any special constraints or guidelines since none were provided. It&#39;s a standalone COBOL program that performs a specific task.</p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-flow-diagram">Boost Flow Diagram</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:26:59 PM PDT</p>
+<pre><code class="hljs language-mermaid"><pre class="mermaid">graph TD;
+style Start fill:#228B22, stroke:#000000, stroke-width:2px;
+style ExampleProcess fill:#228B22, stroke:#000000, stroke-width:4px;
+style ExampleErrorPath fill:#B22222, stroke:#000000, stroke-width:2px;
+
+Start-->CMD-ARGS;
+CMD-ARGS-- ALPHABETIC -->ERROR-PARA;
+CMD-ARGS-- NUMERIC -->DECINUM;
+DECINUM-- < 0 -->ERROR-PARA;
+DECINUM-- >= 0 -->NUM;
+NUM-- EQUAL TO -->DECINUM;
+DECINUM-- NOT EQUAL TO -->ERROR-PARA;
+NUM-- 0 OR 1 -->DISPLAY;
+NUM-- > 1 -->CALC-FACT;
+CALC-FACT-- CNT > NUM -->DISPLAY;
+DISPLAY-- STOP RUN;
+ERROR-PARA-- DISPLAY -->STOP RUN;</pre>
+</code></pre><p>The control flow graph above represents the control flow of the given source code. The primary path is shown in green, while the error path is shown in red.</p>
+<p>The control flow starts at the <code>CMD-ARGS</code> block, where the command-line arguments are accepted. If the <code>CMD-ARGS</code> is alphabetic, the control flow goes to the <code>ERROR-PARA</code> block, which displays an error message and stops the program.</p>
+<p>If the <code>CMD-ARGS</code> is numeric, the control flow goes to the <code>DECINUM</code> block, where the command-line argument is converted to its numeric value. If the <code>DECINUM</code> is less than 0, the control flow goes to the <code>ERROR-PARA</code> block, which displays an error message and stops the program.</p>
+<p>If the <code>DECINUM</code> is greater than or equal to 0, the control flow goes to the <code>NUM</code> block, where the decimal number is moved to the non-decimal number <code>NUM</code>. If the <code>NUM</code> is equal to the <code>DECINUM</code>, the control flow goes to the <code>EQUAL TO</code> block.</p>
+<p>If the <code>NUM</code> is equal to 0 or 1, the control flow goes to the <code>DISPLAY</code> block, which displays 1 and stops the program. If the <code>NUM</code> is greater than 1, the control flow goes to the <code>CALC-FACT</code> block, where the factorial is calculated until <code>CNT</code> is greater than <code>NUM</code>.</p>
+<p>After the factorial calculation, the control flow goes to the <code>DISPLAY</code> block, which displays the left-justified result of the factorial. Finally, the control flow stops the program.</p>
+<p>If any of the conditions are not met, the control flow goes to the <code>ERROR-PARA</code> block, which displays an error message and stops the program.</p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-security-analysis">Boost Source-Level Security Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:27:08 PM PDT</p>
+<p><strong>No bugs found</strong></p>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-performance-analysis">Boost Source-Level Performance Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:27:42 PM PDT</p>
+<ol>
+<li><p><strong>Severity</strong>: 4/10</p>
+<p><strong>Line Number</strong>: 14</p>
+<p><strong>Bug Type</strong>: CPU</p>
+<p><strong>Description</strong>: The use of FUNCTION NUMVAL for converting string to number is CPU-intensive. This function performs a lot of unnecessary checks for a simple integer conversion.</p>
+<p><strong>Solution</strong>: Use a simpler conversion function or method if available in the COBOL version you are using. If not, consider writing a custom conversion routine that does the bare minimum required for your specific use case.</p>
+</li>
+<li><p><strong>Severity</strong>: 6/10</p>
+<p><strong>Line Number</strong>: 33</p>
+<p><strong>Bug Type</strong>: CPU</p>
+<p><strong>Description</strong>: The factorial calculation is done using a loop which is not efficient for large numbers. This can lead to high CPU usage and long execution times.</p>
+<p><strong>Solution</strong>: Consider using a more efficient algorithm for calculating factorial. For example, you could use a recursive function or utilize a memoization technique to store previously calculated results. However, be aware that recursion in COBOL can be tricky and may not be supported in all versions.</p>
+</li>
+<li><p><strong>Severity</strong>: 3/10</p>
+<p><strong>Line Number</strong>: 40</p>
+<p><strong>Bug Type</strong>: Memory</p>
+<p><strong>Description</strong>: The INSPECT TALLYING FOR LEADING ZEROS operation is not efficient as it scans the entire string. This can be memory-intensive for large strings.</p>
+<p><strong>Solution</strong>: Consider using a more efficient method to remove leading zeros. For example, you could write a loop that iterates over the string from the beginning and stops when it encounters a non-zero character.</p>
+</li>
+</ol>
+</div'><div class='output-item'><hr>
+<h3 id="boost-source-level-data-and-privacy-compliance-analysis">Boost Source-Level Data and Privacy Compliance Analysis</h3>
+<p>Last Updated: Saturday, October 21, 2023 at 12:27:56 PM PDT</p>
+<p><strong>No bugs found</strong></p>
+</div'></div>
+</body>
+</html>
