@@ -1,3 +1,7 @@
+# BoostedCoder
+
+To see the Cobol code converted into Python, open the .boost subdirectory and load any *.boost-notebook file.
+
 # Sample Programs in Cobol
 
 Welcome to Sample Programs in Cobol! To find documentation related to the Cobol code in this repo, look [here.](https://sampleprograms.io/languages/cobol)
